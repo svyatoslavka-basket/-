@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Калинин Святослав">
+    <meta name="description" content="Мясной дворик">
+    <meta name="keywords" content="Мясной дворик, мясной дворик, Мясной, мясной, мясо, Мясо, Свинина, свинина, Полуфабрикаты, полуфабрикаты">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <title>Главная</title>
+</head>
+<body>
+<!--функция для выпадающего списка-->
+<!--шапка началась-->
+<header class="header">
+    <div class="header-container">
+        <div class="logo" onclick="location.href='/'"><img src="static/img/img.png" height="100" width="100"/></div>
+        <nav class="nav-links">
+            <button onclick="location.href='/'">Главная</button>
+            <button onclick="location.href='/полуфабрикаты'">Полуфабрикаты</button>
+            <button onclick="location.href='/соусы'">Соусы</button>
+            <button onclick="location.href='/приправы'" style="color: #fff9c4;text-decoration-line: underline; text-decoration-color: #fff9c4">Приправы</button>
+        </nav>
+
+        <form class="search">
+            <input type="search" placeholder="Поиск по каталогу.." id="search">
+            <button class="submit" type="submit">🔍</button>
+            <button type="button" class="cart-button" onclick="location.href='/корзина'" title="Корзина">🛒</button>
+        </form>
+        <button class="accaunt" onclick="popup.showModal()">
+            <img src="/static/img/img.png" alt="">
+        </button>
+    </div>
+    <dialog class="modal" id="popup">
+        <form class="user-profile">
+            <button class="close-button" type="button" onclick="popup.close()">×</button>
+            <div class="profile-content">
+                <img src="/static/img/img.png" alt="Аватар" class="profile-avatar" />
+                <h2 class="profile-name">Святослав Калинин</h2>
+                <p class="profile-email">svatoslav@example.com</p>
+                <p class="profile-phone">+7 (999) 123-45-67</p>
+                <p class="profile-address">г. Саратов, ул. Примерная, д. 1</p>
+                <div class="profile-buttons">
+                    <button type="button" onclick="alert('Переход к редактированию')">Редактировать</button>
+                    <button type="button" onclick="location.href='/выход'">Выйти</button>
+                </div>
+            </div>
+        </form>
+    </dialog>
+</header>
+
+<!--шапка закончилась-->
+<!--основная часть началась-->
+<div class="main">
+    <div class="list">
+<!--1-->
+        <article class="item">
+            <button onclick="location.href='../мясо/lopatka1.html'" class="n1">
+                <img src="/static/img/края.jpg" alt="Края" class="img">
+                    <h3>Лопатка</h3>
+                    ₽ 300/кг
+                <form action="cart.py" method="post">
+                    <input type="hidden" name="item" value="края">
+                    <button type="submit" class="input-busket" onclick="location.href='/create'">🛒</button>
+                </form>
+            </button>
+        </article>
+    <!--        2-->
+        <article class="item">
+            <button onclick="popup.showModal()"  class="n1">
+                <img src="/static/img/края.jpg" alt="Края" class="img">
+                <h3>Края</h3>
+                <p>₽ 300/кг</p>
+            </button>
+        </article>
+        <!--        2-->
+        <article class="item">
+            <button onclick="popup2.showModal()"  class="n1">
+                <img src="/static/img/края.jpg" alt="Края" class="img">
+                <h3>Края</h3>
+                <p>₽ 300/кг</p>
+            </button>
+        </article>
+        <!--        3-->
+        <article class="item">
+            <button onclick="popup3.showModal()"  class="n1"></button>
+        </article>
+        <!--        4-->
+        <article class="item">
+            <button onclick="popup4.showModal()"  class="n1"></button>
+        </article>
+        <article class="item"></article>
+        <article class="item"></article>
+        <!--        4-->
+        <article class="item"></article>
+        <article class="item"></article>
+        <article class="item"></article>
+    </div>
+</div>
+<footer class="footer"></footer>
+</body>
+</html>
